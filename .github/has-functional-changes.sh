@@ -8,5 +8,7 @@ if git diff-index --name-only --exit-code $last_tagged_commit -- . `echo " $IGNO
 then
   echo "No functional changes detected."
   exit 1
-else echo "The functional files above were changed."
+else
+  echo "The functional files above were changed."
+  exit 0
 fi
